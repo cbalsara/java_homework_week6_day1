@@ -8,7 +8,7 @@ public class SuperMarketTest{
   @Before
   public void before() {
     superMarket = new SuperMarket("Asda");
-    apples = new Apple();
+    apples = new Apple("red", "crab", 'm');
   }
 
   @Test
