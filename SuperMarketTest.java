@@ -33,7 +33,13 @@ public void sizeOfApple(){
 
 @Test
 public void superMarketEmpty(){
-  assertEquals(0, superMarket.NothingThere());
+  assertEquals( 0, superMarket.numberInStock() );
+}
+
+@Test
+public void addAppleToMarket(){
+  superMarket.add(apples);
+  assertEquals( 1, superMarket.numberInStock() );
 }
 
 }

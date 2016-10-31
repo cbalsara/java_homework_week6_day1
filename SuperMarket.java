@@ -14,7 +14,7 @@ public class SuperMarket{
     return this.name;
   }
 
-public int NothingThere(){
+public int numberInStock(){
   int count = 0;
 
   for(Apple quantity: stockCount) {
@@ -25,4 +25,15 @@ public int NothingThere(){
   return count;
 }
 
+public void add(Apple apples){
+  if( stockCountFull() ) {
+    return;
+  }
+  int nextEmptySpot = numberInStock();
+  stockCount[nextEmptySpot] = apples;
+  }
+
+  public boolean stockCountFull(){
+    return numberInStock() == stockCount.length; 
+  }
 }
