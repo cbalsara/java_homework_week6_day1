@@ -16,7 +16,10 @@ public class SuperMarketTest{
     assertEquals( "Asda", superMarket.nameOfShop() );
   }
 
-
+  @Test 
+  public void appleColour(){
+    assertEquals( "red", apples.colourOfApple() );
+  }
 
 
 
