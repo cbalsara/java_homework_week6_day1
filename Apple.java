@@ -5,7 +5,7 @@ private String colour;
 private String brand;
 private char size; 
 
-// java constructor. this should always be public!!!
+// java constructor. this should always be public, never private or it cant be accesed in the test file!!!
 public Apple(String red, String crab, char m){
   this.colour = red;
   this.brand = crab;
@@ -14,6 +14,10 @@ public Apple(String red, String crab, char m){
 
 public String colourOfApple(){
   return this.colour;
+}
+
+public String brandOfApple(){
+  return this.brand;
 }
 
 }

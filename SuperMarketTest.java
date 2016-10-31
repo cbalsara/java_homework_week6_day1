@@ -21,6 +21,10 @@ public class SuperMarketTest{
     assertEquals( "red", apples.colourOfApple() );
   }
 
+  @Test
+  public void typeOfBrand(){
+    assertEquals( "crab", apples.brandOfApple());
+  }
 
 
 }
