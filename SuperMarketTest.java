@@ -26,5 +26,9 @@ public class SuperMarketTest{
     assertEquals( "crab", apples.brandOfApple());
   }
 
+@Test 
+public void sizeOfApple(){
+  assertEquals( 'm', apples.sizeOfApple());
+}
 
 }

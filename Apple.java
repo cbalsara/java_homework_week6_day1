@@ -20,4 +20,8 @@ public String brandOfApple(){
   return this.brand;
 }
 
+public char sizeOfApple(){
+  return this.size;
+}
+
 }
