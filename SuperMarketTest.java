@@ -31,4 +31,9 @@ public void sizeOfApple(){
   assertEquals( 'm', apples.sizeOfApple());
 }
 
+@Test
+public void superMarketEmpty(){
+  assertEquals(0, superMarket.NothingThere());
+}
+
 }

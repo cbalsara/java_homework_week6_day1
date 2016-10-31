@@ -14,4 +14,15 @@ public class SuperMarket{
     return this.name;
   }
 
+public int NothingThere(){
+  int count = 0;
+
+  for(Apple quantity: stockCount) {
+    if (quantity != null) {
+      count ++;
+    }
+  }
+  return count;
+}
+
 }
