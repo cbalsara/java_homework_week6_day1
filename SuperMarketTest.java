@@ -42,4 +42,14 @@ public void addAppleToMarket(){
   assertEquals( 1, superMarket.numberInStock() );
 }
 
+@Test
+public void numberInStockEmptied(){
+  superMarket.add(apples);
+  assertEquals( 1, superMarket.numberInStock() );
+  superMarket.empty();
+  assertEquals( 0, superMarket.numberInStock() );
+}
+
+
+
 }

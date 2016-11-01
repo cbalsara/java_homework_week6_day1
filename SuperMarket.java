@@ -36,4 +36,10 @@ public void add(Apple apples){
   public boolean stockCountFull(){
     return numberInStock() == stockCount.length; 
   }
+
+  public void empty(){
+    for (int i = 0; i< stockCount.length; i++) {
+      stockCount[i] = null;
+    }
+  }
 }
