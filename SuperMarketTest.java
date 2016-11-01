@@ -10,7 +10,7 @@ public class SuperMarketTest{
   public void before() {
     superMarket = new SuperMarket("Asda");
     apples = new Apple("red", "crab", 'm');
-    pears = new Pear("green", "cooking", 'l');
+    pears = new Pear();
   }
 
   @Test

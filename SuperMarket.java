@@ -3,11 +3,13 @@ import java.util.*;
 public class SuperMarket{
 
 // instance variable 
+  // this will eventaully look like private ArrayList<Purchasable> stockCount;
   private String name;
   private ArrayList<Apple>stockCountApple;
   private ArrayList<Pear>stockCountPear;
 
 // java constructor 
+// these two below will go and look like this.stockCount = new ArrayList<Purchasable>();
   public SuperMarket(String nameOfSupermarket){
     this.stockCountApple = new ArrayList<Apple>();
     this.stockCountPear = new ArrayList<Pear>();
@@ -19,30 +21,30 @@ public class SuperMarket{
   }
 
 public int numberInStockApple(){
-  return stockCountApple.size();
+  return this.stockCountApple.size();
 }
 
 public int numberInStockPear(){
-  return stockCountPear.size();
+  return this.stockCountPear.size();
 }
 
 public void add(Apple apples){
-  stockCountApple.add(apples);
+  this.stockCountApple.add(apples);
 }
 
 public void add(Pear pears){
-  stockCountPear.add(pears);
+  this.stockCountPear.add(pears);
 }
  
 
 // had to change the length into .size(); as the stockCount is now an ArrayList
   public int stockCountFull(){
-    return stockCountApple.size() + stockCountPear.size();
+    return this.stockCountApple.size() + this.stockCountPear.size();
   }
 
   public void empty(){
-    stockCountApple.clear();
-    stockCountPear.clear();  
+    this.stockCountApple.clear();
+    this.stockCountPear.clear();  
   }
 
 }

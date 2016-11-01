@@ -1,4 +1,4 @@
-public class Apple{
+public class Apple implements Purchasable{
 
 // instance variable
 private String colour;
