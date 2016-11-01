@@ -1,13 +1,15 @@
+import java.util.*;
+
 public class SuperMarket{
 
 // instance variable 
   private String name;
-  private Apple[] stockCount;
+  private ArrayList<Apple>stockCount;
 
 // java constructor 
   public SuperMarket(String nameOfSupermarket){
     this.name = nameOfSupermarket;
-    this.stockCount = new Apple[12];
+    this.stockCount = new ArrayList<Apple>();
   }
 
   public String nameOfShop(){
@@ -15,31 +17,21 @@ public class SuperMarket{
   }
 
 public int numberInStock(){
-  int count = 0;
-
-  for(Apple quantity: stockCount) {
-    if (quantity != null) {
-      count ++;
-    }
-  }
-  return count;
+  return stockCount.size();
 }
 
 public void add(Apple apples){
-  if( stockCountFull() ) {
-    return;
-  }
-  int nextEmptySpot = numberInStock();
-  stockCount[nextEmptySpot] = apples;
-  }
+  stockCount.add(apples);
+}
+ 
 
+// had to change the length into .size(); as the stockCount is now an ArrayList
   public boolean stockCountFull(){
-    return numberInStock() == stockCount.length; 
+    return numberInStock() == stockCount.size(); 
   }
 
   public void empty(){
-    for (int i = 0; i< stockCount.length; i++) {
-      stockCount[i] = null;
-    }
+    stockCount.clear();  
   }
+
 }
