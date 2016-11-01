@@ -24,4 +24,6 @@ public char sizeOfApple(){
   return this.size;
 }
 
+
+
 }

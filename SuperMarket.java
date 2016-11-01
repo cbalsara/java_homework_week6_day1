@@ -4,34 +4,45 @@ public class SuperMarket{
 
 // instance variable 
   private String name;
-  private ArrayList<Apple>stockCount;
+  private ArrayList<Apple>stockCountApple;
+  private ArrayList<Pear>stockCountPear;
 
 // java constructor 
   public SuperMarket(String nameOfSupermarket){
+    this.stockCountApple = new ArrayList<Apple>();
+    this.stockCountPear = new ArrayList<Pear>();
     this.name = nameOfSupermarket;
-    this.stockCount = new ArrayList<Apple>();
   }
 
   public String nameOfShop(){
     return this.name;
   }
 
-public int numberInStock(){
-  return stockCount.size();
+public int numberInStockApple(){
+  return stockCountApple.size();
+}
+
+public int numberInStockPear(){
+  return stockCountPear.size();
 }
 
 public void add(Apple apples){
-  stockCount.add(apples);
+  stockCountApple.add(apples);
+}
+
+public void add(Pear pears){
+  stockCountPear.add(pears);
 }
  
 
 // had to change the length into .size(); as the stockCount is now an ArrayList
-  public boolean stockCountFull(){
-    return numberInStock() == stockCount.size(); 
+  public int stockCountFull(){
+    return stockCountApple.size() + stockCountPear.size();
   }
 
   public void empty(){
-    stockCount.clear();  
+    stockCountApple.clear();
+    stockCountPear.clear();  
   }
 
 }
