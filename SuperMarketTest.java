@@ -1,4 +1,4 @@
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 import org.junit.*;
 
 public class SuperMarketTest{
@@ -58,6 +58,12 @@ public void numberInStockEmptied(){
   assertEquals( 0, superMarket.numberInStock() );
 }
 
+@Test 
+public void canRefund(){
+  superMarket.add(apples);
+  Purchasable fruit = superMarket.refund();
+  assertNotNull(fruit);
+}
 
 
 }

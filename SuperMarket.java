@@ -44,4 +44,10 @@ public void add(Purchasable fruit){
     this.stockCount.clear();  
   }
 
+  public Purchasable refund(){
+    if ( numberInStock() > 0 ) {
+      return stockCount.remove(0);
+    }
+    return null;
+  } 
 }
