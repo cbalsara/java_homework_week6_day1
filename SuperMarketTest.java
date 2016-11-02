@@ -35,19 +35,19 @@ public void sizeOfApple(){
 
 @Test
 public void superMarketEmpty(){
-  assertEquals( 0, superMarket.numberInStockApple() + superMarket.numberInStockPear() );
+  assertEquals( 0, superMarket.numberInStock() );
 }
 
 @Test
 public void addAppleToMarket(){
   superMarket.add(apples);
-  assertEquals( 1, superMarket.numberInStockApple() );
+  assertEquals( 1, superMarket.numberInStock() );
 }
 
 @Test 
 public void addPearToMarket(){
   superMarket.add(pears);
-  assertEquals( 1, superMarket.numberInStockPear() );
+  assertEquals( 1, superMarket.numberInStock() );
 }
 
 @Test
@@ -55,7 +55,7 @@ public void numberInStockEmptied(){
   superMarket.add(apples);
   superMarket.add(pears);
   superMarket.empty();
-  assertEquals( 0, superMarket.numberInStockApple() + superMarket.numberInStockPear() );
+  assertEquals( 0, superMarket.numberInStock() );
 }
 
 
